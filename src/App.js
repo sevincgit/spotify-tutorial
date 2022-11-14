@@ -4,7 +4,8 @@ import axios from 'axios';
 import SpotifyGetPlayLists from './SpotifyGetPlaylists';
 
 function App() {
-  const CLIENT_ID = '598f4d4db65d4937a38738aebc6886cd';
+  const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+  console.log('client id: ', CLIENT_ID);
   const REDIRECT_URI = 'http://localhost:3000';
   const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
   const SCOPES = [];
